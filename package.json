@@ -1,0 +1,36 @@
+{
+  "name": "ddry-selenium-phantomjs",
+  "version": "1.0.0",
+  "description": "PhantomJS Selenium driver wrapped ready to use with ddry",
+  "scripts": {
+    "test": "make test && make coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ddry/selenium-phantomjs"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "keywords": [
+    "ddry",
+    "mocha",
+    "selenium",
+    "webdriver",
+    "phantomjs"
+  ],
+  "author": "Vassiliy Pimkin <vassiliy.pimkin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ddry-selenium-matchers": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.14",
+    "selenium-webdriver": "^3.0.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.16",
+    "ddry-mocha": "3.2.0-d0.0.4",
+    "mocha-lcov-reporter": "^1.2.0"
+  }
+}
