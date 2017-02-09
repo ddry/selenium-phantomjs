@@ -8,14 +8,19 @@
   spec.apply({
     title: 'Selenium PhantomJS testing',
     spec: 'spec',
-    matchers: 'ddry-selenium-matchers',
+    matchers: 'custom_matchers',
     moduleTitles: {
-      phantomjs: 'Selenium PhantomJS testing'
+      phantomjs: 'Selenium PhantomJS testing',
+      instance: 'PhantomJS driver as it is'
     },
     outside: {
-      phantomjs: 'index'
+      phantomjs: 'index',
+      instance: 'index'
     },
-    use: ['phantomjs']
+    use: ['phantomjs'],
+    initial: {
+      instance: []
+    }
   });
 
 }).call(this);
