@@ -1,6 +1,6 @@
 {
   "name": "ddry-selenium-phantomjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PhantomJS Selenium driver wrapped ready to use with ddry",
   "scripts": {
     "test": "make coveralls"
