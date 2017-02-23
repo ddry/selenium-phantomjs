@@ -1,12 +1,11 @@
-.PHONY: co coveralls mo mocha test
+.PHONY: c- coveralls mocha ps server-
 
-co:
-	coffee -co . source
+c- c-%:
+	make server-$*
+	coffee -c$*o . source
 
 coveralls:
 	istanbul cover ./node_modules/mocha/bin/_mocha spec/main.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
-
-mo: co mocha
 
 mocha:
 	./node_modules/.bin/mocha \
@@ -14,4 +13,11 @@ mocha:
 		spec/main.js \
 		--check-leaks
 
-test: mocha
+ps:
+	sh usecase/sh/ps_cleanup
+
+server- server-%:
+	rm -rf spec
+	@if [ "$*" = "w" ]; then \
+		sh usecase/sh/server; \
+	fi
