@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "PhantomJS Selenium driver wrapped ready to use with ddry",
   "scripts": {
-    "test": "make test && make coveralls"
+    "test": "make coveralls"
   },
   "repository": {
     "type": "git",
